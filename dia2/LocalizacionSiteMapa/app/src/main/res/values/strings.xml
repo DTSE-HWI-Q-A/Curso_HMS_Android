@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LocalizacionSiteMapa</string>
+    <string name="API_KEY_SITE"></string>
+    <string name="APP_ID"></string>
+</resources>

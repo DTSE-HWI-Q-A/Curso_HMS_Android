@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="120dp"
+            android:visibility="gone"
+            android:background="@color/colorAccentGris"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- SearchFragment es un fragment predeterminado para busqueda -->
+        <!-- com.huawei.hms.site.widget.SearchFragment -->
+
+        <fragment
+            android:id="@+id/widget_fragment"
+            android:name="com.huawei.hms.site.widget.SearchFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/et_buscador"/>
+
+        <EditText
+            android:id="@+id/et_buscador"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/widget_fragment"
+            app:layout_constraintBottom_toTopOf="@+id/bt_localizador"
+            app:layout_constraintEnd_toStartOf="@+id/bt_buscarDireccion"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/bt_buscarDireccion"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/buscar"
+            app:layout_constraintTop_toBottomOf="@+id/widget_fragment"
+            app:layout_constraintBottom_toTopOf="@+id/bt_localizador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/et_buscador" />
+
+        <Button
+            android:id="@+id/bt_localizador"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Localizador"
+            android:visibility="visible"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/et_buscador"
+            app:layout_constraintBottom_toTopOf="@+id/ll_actividad"
+            app:layout_constraintEnd_toStartOf="@+id/bt_localizador_callback"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <Button
+            android:id="@+id/bt_localizador_callback"
+            android:layout_marginTop="20dp"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Callback"
+            android:visibility="visible"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/et_buscador"
+            app:layout_constraintBottom_toTopOf="@+id/ll_actividad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bt_localizador"/>
+
+        <LinearLayout
+            android:id="@+id/ll_actividad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/bt_localizador"
+            app:layout_constraintBottom_toTopOf="@+id/rv_sites"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/bt_activarAct"
+                android:layout_marginTop="20dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="On"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/bt_desactivarAct"
+                android:layout_marginTop="20dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="Off"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_actividad"
+                android:layout_marginTop="20dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Actividad"/>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_sites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            tools:listitem="@layout/adapter_item"
+            app:layout_constraintTop_toBottomOf="@+id/ll_actividad" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
