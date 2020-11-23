@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGameBackground"
+    tools:context=".SecondFragment">
+
+    <TextView
+        android:id="@+id/textViewPlayerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="@string/player_name_text"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPlayerId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="@string/player_id_text"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlayerName" />
+
+    <TextView
+        android:id="@+id/textViewGamesWon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="@string/games_win_text"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPlayerRanking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlayerId" />
+
+
+    <TextView
+        android:id="@+id/textViewPlayerRanking"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="@string/player_ranking_text"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewGamesWon"
+        app:layout_constraintTop_toBottomOf="@id/textViewPlayerId" />
+
+    <TextView
+        android:id="@+id/textViewGamesWonInARow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="@string/games_win_in_a_row_text"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGamesWon" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewGamesWonInARow">
+
+        <Button
+            android:id="@+id/buttonAchivementList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="@string/achievements_button_text"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/buttonLeaderBoard"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonLeaderBoard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="@string/leader_board_button_text"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/buttonAchivementList"
+            app:layout_constraintRight_toLeftOf="@+id/buttonSignOut"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/buttonSignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="@string/sign_out_button_text"
+            android:textAllCaps="false"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/buttonLeaderBoard"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="286dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsLayout"
+        app:layout_constraintVertical_bias="0.512" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="291dp"
+        android:layout_height="299dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn1"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_margin="2pt"
+                android:background="@android:color/background_light"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn2"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_margin="2pt"
+                android:background="@android:color/background_light"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn3"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_margin="2pt"
+                android:background="@android:color/background_light"
+                android:textSize="36sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn4"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_margin="2pt"
+                android:background="@android:color/background_light"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn5"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_margin="2pt"
+                android:background="@android:color/background_light"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn6"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_margin="2pt"
+                android:background="@android:color/background_light"
+                android:textSize="36sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="87dp">
+
+            <Button
+                android:id="@+id/btn7"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_margin="2pt"
+                android:background="@android:color/background_light"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn8"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_margin="2pt"
+                android:background="@android:color/background_light"
+                android:textSize="36sp" />
+
+            <Button
+                android:id="@+id/btn9"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_margin="2pt"
+                android:background="@android:color/background_light"
+                android:textSize="36sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="290dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/reset_game"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="hw_sign_in">Sign in with HUAWEI ID</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Tic Tac Toe</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="games_win_text">Juegos ganados: %d</string>
+    <string name="games_win_in_a_row_text">Racha de juegos ganados: %d</string>
+    <string name="player_name_text">Nombre del jugador: %s</string>
+    <string name="player_id_text">ID del jugador: %s</string>
+    <string name="player_ranking_text">Rank: %s</string>
+
+    <string name="winner_text">WINNER!</string>
+    <string name="loser_text">LOSER!</string>
+    <string name="tie_text">EMPATE!</string>
+    <string name="reset_game">NUEVO JUEGO</string>
+    <string name="achievements_button_text">Achievements</string>
+    <string name="leader_board_button_text">Leader Board</string>
+    <string name="sign_out_button_text">SignOut</string>
+</resources>
