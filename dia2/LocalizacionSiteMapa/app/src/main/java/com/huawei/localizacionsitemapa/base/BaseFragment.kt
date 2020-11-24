@@ -12,9 +12,12 @@ import androidx.fragment.app.Fragment
 
 abstract class BaseFragment : Fragment() {
 
+    // Lista de permisos que se solicitara dependiendo de la version es igual o menor a SDK 28
+
     val LISTA_PERMISSION = arrayOf(
-        Manifest.permission.ACCESS_COARSE_LOCATION,
-        Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.INTERNET)
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.INTERNET)
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view: View = inflater.inflate(getLayout(), container, false)

@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 
 abstract class BaseActivity : AppCompatActivity(){
 
+    // Lista de permisos que se solicitara dependiendo de la version es igual o menor a SDK 28
+
     val LISTA_PERMISSION = if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
         arrayOf(
             Manifest.permission.ACCESS_FINE_LOCATION,

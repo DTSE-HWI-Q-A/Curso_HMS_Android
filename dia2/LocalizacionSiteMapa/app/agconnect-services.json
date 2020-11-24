@@ -1,0 +1,14 @@
+{
+	"client":{
+		"appType":"1",
+		"cp_id":"2640051000001086939",
+		"product_id":"736430079244698619",
+		"client_id":"493541082777268864",
+		"client_secret":"E53BF116F1C55BCC7748DC6CE4F064CEF772C5C6DAB5962694CA1E505C629965",
+		"project_id":"736430079244698619",
+		"app_id":"103254171",
+		"api_key":"CgB6e3x9+e8gi+qXxnUTADmk6LHh8n0QqykumF3mbS/NuMQkGBsmOweRINR2pazf9Txctu+dnkiZRXRA8PV6s7C3",
+		"package_name":"com.huawei.localizacionsitemapa"
+	},
+	"configuration_version":"1.0"
+}

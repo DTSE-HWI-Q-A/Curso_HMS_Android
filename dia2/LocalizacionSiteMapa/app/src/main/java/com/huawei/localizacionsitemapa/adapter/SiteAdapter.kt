@@ -28,11 +28,6 @@ class SiteAdapter(var context: Context, private var lista : ArrayList<Site>) :
         }
     }
 
-    fun clear(){
-        lista.clear()
-        notifyDataSetChanged()
-    }
-
     class SiteHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvNombre = itemView.tv_nombre
     }

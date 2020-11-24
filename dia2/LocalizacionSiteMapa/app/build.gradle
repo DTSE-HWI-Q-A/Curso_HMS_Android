@@ -54,15 +54,13 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
-    // Core AgConnect
+    // Huawei agconnect Core
     implementation 'com.huawei.agconnect:agconnect-core:1.3.1.300'
 
     // Location Kit
     implementation 'com.huawei.hms:location:5.0.0.302'
-
     // Map Kit
     implementation 'com.huawei.hms:maps:5.0.0.300'
-
     // Site Kit
     implementation 'com.huawei.hms:site:5.0.2.300'
 

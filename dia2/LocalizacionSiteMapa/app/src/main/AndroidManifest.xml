@@ -53,7 +53,9 @@
         <!-- algunas solicitudes requieren que se identifique el APP ID es obtenido de archivoagconnect-services -->
         <meta-data
             android:name="com.huawei.hms.client.appid"
-            android:value="" />
+            android:value="@string/APP_ID" />
+
+
 
     </application>
 

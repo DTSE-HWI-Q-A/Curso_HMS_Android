@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import com.huawei.hms.location.ActivityIdentificationResponse
 import com.huawei.localizacionsitemapa.Constante
+import com.huawei.localizacionsitemapa.activity.MainActivity.Companion.activityIdent
 
 
 class LocationBroadcastReceiver : BroadcastReceiver()  {
@@ -27,6 +28,7 @@ class LocationBroadcastReceiver : BroadcastReceiver()  {
                         Constante.RUNNING_CODE -> Constante.RUNNING_NAME
                         else -> Constante.EMPTY
                     }
+                    activityIdent.obtenerActividad(action + " " + actIdent.identificationActivity)
                 }
 
             }
